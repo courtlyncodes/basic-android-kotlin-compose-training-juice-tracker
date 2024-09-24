@@ -19,9 +19,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     app:startDestination="@id/trackerFragment">
     <fragment
-        android:id="@+id/trackerFragment"
         android:name="com.example.juicetracker.TrackerFragment"
         android:label="fragment_tracker"
-        tools:layout="@layout/fragment_tracker" >
+        tools:layout="@layout/fragment_tracker">
+        <action
+            android:id="@+id/action_trackerFragment_to_entryDialogFragment"
+            app:destination="@id/entryDialogFragment" />
+        <action
+            android:id="@+id/action_trackerFragment_to_entryDialogFragment2"
+            app:destination="@id/entryDialogFragment" />
+        <action
+            android:id="@+id/action_trackerFragment_to_entryDialogFragment3"
+            app:destination="@id/entryDialogFragment" />
+        <action
+            android:id="@+id/action_trackerFragment_to_entryDialogFragment4"
+            app:destination="@id/entryDialogFragment" />
+        <action
+            android:id="@+id/action_nav_graph_to_entryDialogFragment"
+            app:destination="@id/entryDialogFragment" />
+        <action
+            android:id="@+id/action_nav_graph_to_entryDialogFragment2"
+            app:destination="@id/entryDialogFragment" />
+        <action
+            android:id="@+id/action_nav_graph_to_entryDialogFragment3"
+            app:destination="@id/entryDialogFragment" />
     </fragment>
+    <dialog
+        android:id="@+id/entryDialogFragment"
+        android:name="com.example.juicetracker.EntryDialogFragment"
+        android:label="EntryDialogFragment" >
+        <argument
+            android:name="itemId"
+            app:argType="long"
+            android:defaultValue="0L" />
+    </dialog>
 </navigation>
